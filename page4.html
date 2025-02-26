@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCopy - Your Academic Writing Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-primary-600 text-2xl font-bold">GetCopy</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-primary-600 transition-colors duration-200">Features</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary-600 transition-colors duration-200">Pricing</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-primary-600 transition-colors duration-200">Testimonials</a>
+                <a href="#faq" class="text-gray-600 hover:text-primary-600 transition-colors duration-200">FAQ</a>
+                <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors duration-200">Start Free Trial</a>
+            </div>
+            <div class="flex md:hidden items-center">
+                <button class="text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">GetCopy - Your Academic Writing Assistant</h1>
+                <h2 class="text-xl md:text-2xl mb-8">Transform Your Writing Journey</h2>
+                <p class="text-lg mb-8">Say goodbye to writer's block and hello to academic success. GetCopy is your AI-powered writing companion that helps you create better essays, research papers, and assignments faster.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="bg-white text-primary-600 px-6 py-3 rounded-md font-medium text-center hover:bg-gray-100 transition-colors duration-200">Start Free Trial</a>
+                    <a href="#" class="bg-transparent border border-white text-white px-6 py-3 rounded-md font-medium text-center hover:bg-white/10 transition-colors duration-200">Watch Demo</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/0ea5e9/FFFFFF?text=GetCopy+AI" alt="GetCopy AI Writing Assistant" class="rounded-lg shadow-xl w-full">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Section -->
+<section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">Why Students Choose GetCopy</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-4xl text-primary-600 mb-4">📚</div>
+                <h3 class="text-xl font-semibold mb-4">Better Grades, Less Stress</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Improve your writing quality with AI-powered suggestions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Get real-time feedback on grammar, style, and clarity</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Meet deadlines with confidence</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-4xl text-primary-600 mb-4">⏰</div>
+                <h3 class="text-xl font-semibold mb-4">Save Precious Time</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Cut research time in half with smart source suggestions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Generate outlines in seconds</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Format citations automatically</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-4xl text-primary-600 mb-4">💡</div>
+                <h3 class="text-xl font-semibold mb-4">Learn As You Write</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Understand complex topics better with simplified explanations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Learn from writing suggestions and improvements</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Develop stronger academic writing skills</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">Features That Make Writing Easier</h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Feature 1 -->
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0 bg-primary-100 rounded-full p-4 w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Smart Research Assistant</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Find relevant academic sources instantly</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Get article summaries and key points</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Save and organize research materials</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0 bg-primary-100 rounded-full p-4 w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Writing Enhancement</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Real-time grammar and style checks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Vocabulary suggestions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Clarity improvements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Plagiarism prevention</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0 bg-primary-100 rounded-full p-4 w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Citation Made Simple</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Automatic citation generation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Support for all major formats (APA, MLA, Chicago)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Bibliography organization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0 bg-primary-100 rounded-full p-4 w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Academic Templates</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Essay structures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Research paper formats</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Lab report templates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Thesis outlines</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Pricing Plans for Students</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Choose the plan that fits your academic needs and budget.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Free Plan -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-4">Free Plan</h3>
+                    <div class="text-4xl font-bold mb-6">$0<span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Basic writing suggestions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>3 documents per month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Standard templates</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full bg-gray-100 text-gray-800 text-center py-3 rounded-md font-medium hover:bg-gray-200 transition-colors duration-200">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Student Pro -->
+            <div class="border-2 border-primary-500 rounded-xl overflow-hidden shadow-lg relative">
+                <div class="absolute top-0 right-0 bg-primary-500 text-white px-4 py-1 rounded-bl-lg font-medium">Popular</div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-4">Student Pro</h3>
+                    <div class="text-4xl font-bold mb-6">$9.99<span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Unlimited documents</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Advanced AI assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>All templates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full bg-primary-600 text-white text-center py-3 rounded-md font-medium hover:bg-primary-700 transition-colors duration-200">Start Free Trial</a>
+                </div>
+            </div>
+
+            <!-- Student Team -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-4">Student Team</h3>
+                    <div class="text-4xl font-bold mb-6">$19.99<span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Everything in Pro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Group collaboration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Share templates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-primary-600 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Team workspace</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full bg-gray-800 text-white text-center py-3 rounded-md font-medium hover:bg-gray-900 transition-colors duration-200">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8 text-gray-600">
+            <p>*Special discount: 20% off with valid student email</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">What Students Say</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="text-4xl text-primary-500">❝</div>
+                </div>
+                <p class="text-gray-700 mb-6">GetCopy helped me improve my essay grades from B's to A's. The writing suggestions are like having a personal writing tutor.</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+                        <img src="https://placehold.co/200x200/0ea5e9/FFFFFF?text=SJ" alt="Sarah J." class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Sarah J.</h4>
+                        <p class="text-sm text-gray-600">Psychology Major</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="text-4xl text-primary-500">❝</div>
+                </div>
+                <p class="text-gray-700 mb-6">I used to spend hours formatting citations. Now it takes minutes. This tool is a lifesaver!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+                        <img src="https://placehold.co/200x200/0ea5e9/FFFFFF?text=MT" alt="Mike T." class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Mike T.</h4>
+                        <p class="text-sm text-gray-600">Engineering Student</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="text-4xl text-primary-500">❝</div>
+                </div>
+                <p class="text-gray-700 mb-6">The research assistant feature helped me find perfect sources for my thesis. Highly recommend!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+                        <img src="https://placehold.co/200x200/0ea5e9/FFFFFF?text=EL" alt="Emma L." class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Emma L.</h4>
+                        <p class="text-sm text-gray-600">History Major</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Steps Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">Get Started in 3 Simple Steps</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-2xl font-bold mx-auto mb-6">1</div>
+                <h3 class="text-xl font-semibold mb-4">Sign Up</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li>Create your account with your student email</li>
+                    <li>Get instant access to basic features</li>
+                </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-2xl font-bold mx-auto mb-6">2</div>
+                <h3 class="text-xl font-semibold mb-4">Choose Your Plan</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li>Select the plan that fits your needs</li>
+                    <li>Start with a 14-day free trial</li>
+                </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-2xl font-bold mx-auto mb-6">3</div>
+                <h3 class="text-xl font-semibold mb-4">Start Writing</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li>Upload your assignment or start from scratch</li>
+                    <li>Let GetCopy guide you to better writing</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="inline-block bg-primary-600 text-white px-8 py-4 rounded-md font-medium hover:bg-primary-700 transition-colors duration-200 text-lg">Start Your Free Trial Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-3">Is GetCopy suitable for all academic subjects?</h3>
+                <p class="text-gray-600">Yes! GetCopy supports writing across all academic disciplines, from humanities to sciences.</p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-3">Does using GetCopy count as cheating?</h3>
+                <p class="text-gray-600">No. GetCopy is a learning tool that helps improve your writing skills. All work remains your own.</p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-3">Can I use GetCopy on my mobile device?</h3>
+                <p class="text-gray-600">Yes, GetCopy works on all devices through our web app and mobile apps.</p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-3">What if I'm not satisfied with GetCopy?</h3>
+                <p class="text-gray-600">We offer a 30-day money-back guarantee for all paid plans.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Academic Writing?</h2>
+        <p class="text-xl mb-8">Join thousands of students who are already writing better papers and saving time with GetCopy.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#" class="bg-white text-primary-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200">Start Your Free Trial</a>
+            <a href="#" class="bg-transparent border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white/10 transition-colors duration-200">Watch Demo</a>
+            <a href="#" class="bg-transparent border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white/10 transition-colors duration-200">Contact Support</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">GetCopy</h3>
+                <p class="text-gray-400">Your AI-powered academic writing assistant that helps students create better papers faster.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Product</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Features</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Testimonials</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Blog</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Writing Tips</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Academic Resources</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Help Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Company</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Careers</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Contact</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400">*Terms and conditions apply. Student verification required for discounts.</p>
+            <p class="text-gray-400 mt-4 md:mt-0">© 2023 GetCopy. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

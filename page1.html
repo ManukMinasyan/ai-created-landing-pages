@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCopy - AI-Powered Academic Writing Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            300: '#f0abfc',
+                            400: '#e879f9',
+                            500: '#d946ef',
+                            600: '#c026d3',
+                            700: '#a21caf',
+                            800: '#86198f',
+                            900: '#701a75',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(90deg, #0ea5e9 0%, #a21caf 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #0ea5e9 0%, #a21caf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<!-- Navbar -->
+<nav class="bg-white shadow-sm fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-gradient">GetCopy</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Features</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Testimonials</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Pricing</a>
+                <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Blog</a>
+                <a href="#" class="gradient-bg text-white px-5 py-2 rounded-full font-medium hover:opacity-90 transition-opacity">Try Free</a>
+            </div>
+            <div class="flex md:hidden items-center">
+                <button class="text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                <span>Craft Essays & Research with </span>
+                <span class="text-gradient">AI</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">Turn the grind into breakthroughs. GetCopy — your AI-powered academic sidekick.</p>
+            <a href="#" class="gradient-bg text-white px-8 py-4 rounded-full font-medium text-lg inline-block hover:opacity-90 transition-opacity">Try Free</a>
+        </div>
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl transform rotate-3"></div>
+            <img src="https://placehold.co/600x400/6540EA/FFFFFF?text=GetCopy" alt="GetCopy Dashboard" class="relative z-1 rounded-2xl shadow-xl w-full"/>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What you can create with GetCopy</h2>
+        <div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mb-6">
+                <i class="fas fa-book text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Essays & Theses</h3>
+            <p class="text-gray-600">Write smarter, not harder. Save hours.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mb-6">
+                <i class="fas fa-search text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Lit Reviews</h3>
+            <p class="text-gray-600">Nail deep analysis + structured insights.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mb-6">
+                <i class="fas fa-file-alt text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Research Papers</h3>
+            <p class="text-gray-600">Level up your writing skills.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mb-6">
+                <i class="fas fa-user-edit text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Personal Statements</h3>
+            <p class="text-gray-600">Stand out, not stress out.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mb-6">
+                <i class="fas fa-microphone text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Speeches</h3>
+            <p class="text-gray-600">Go from blank page to mic drop in minutes.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mb-6">
+                <i class="fas fa-blog text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Blog Post</h3>
+            <p class="text-gray-600">Boost your blog and article writing with AI.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Banner -->
+<section class="gradient-bg py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Join 14,500+ academics, researchers, and writers</h2>
+        <p class="text-white/80 text-lg">Trusted by students, professors, and professionals worldwide</p>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Hear From Our Users</h2>
+        <div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="flex items-center mb-4">
+                <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img src="/api/placeholder/80/80" alt="Alex Rivera" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h4 class="font-bold">Alex Rivera</h4>
+                    <p class="text-gray-600 text-sm">Graduate Student</p>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-yellow-500 font-bold">4.9</span>
+                    <div class="flex text-yellow-500">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600">As a grad student juggling multiple research papers, GetCopy has been a lifesaver. The citation tools and AI suggestions have cut my writing time in half!</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="flex items-center mb-4">
+                <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img src="/api/placeholder/80/80" alt="Priya Patel" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h4 class="font-bold">Priya Patel</h4>
+                    <p class="text-gray-600 text-sm">Freelance Writer</p>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-yellow-500 font-bold">5</span>
+                    <div class="flex text-yellow-500">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600">I write blog posts and articles for various clients, and GetCopy helps me maintain different style guides effortlessly. The AI suggestions are always spot-on!</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="flex items-center mb-4">
+                <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img src="/api/placeholder/80/80" alt="Anna Smith" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h4 class="font-bold">Anna Smith</h4>
+                    <p class="text-gray-600 text-sm">PhD Candidate</p>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-yellow-500 font-bold">4.8</span>
+                    <div class="flex text-yellow-500">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600">GetCopy's AI helps me stay on track with my dissertation. The writing suggestions are like having a personal writing coach!</p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="flex items-center mb-4">
+                <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img src="/api/placeholder/80/80" alt="Tom Baker" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h4 class="font-bold">Tom Baker</h4>
+                    <p class="text-gray-600 text-sm">High School Teacher</p>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-yellow-500 font-bold">5</span>
+                    <div class="flex text-yellow-500">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600">GetCopy helps me create better lesson plans and study materials. The document templates save me hours of formatting time each week.</p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="flex items-center mb-4">
+                <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img src="/api/placeholder/80/80" alt="Maria Santos" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h4 class="font-bold">Maria Santos</h4>
+                    <p class="text-gray-600 text-sm">Small Business Owner</p>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-yellow-500 font-bold">4.9</span>
+                    <div class="flex text-yellow-500">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600">I use GetCopy for all my business documents - from proposals to marketing materials. The AI helps me write more professionally, and my clients have noticed!</p>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <div class="flex items-center mb-4">
+                <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img src="/api/placeholder/80/80" alt="Jin Lee" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h4 class="font-bold">Jin Lee</h4>
+                    <p class="text-gray-600 text-sm">Book Author</p>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-yellow-500 font-bold">4.9</span>
+                    <div class="flex text-yellow-500">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-600">Writing my first novel was much easier with GetCopy. The writing suggestions helped me stay consistent with my character voices and plot details.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 rounded-3xl">
+    <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to write smarter?</h2>
+        <p class="text-xl text-gray-600 mb-8">Join thousands of students, researchers, and professionals who are saving time and improving their writing with GetCopy.</p>
+        <a href="#" class="gradient-bg text-white px-8 py-4 rounded-full font-medium text-lg inline-block hover:opacity-90 transition-opacity">Try Free Now</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <h3 class="text-2xl font-bold mb-4 text-gradient">GetCopy</h3>
+            <p class="text-gray-400">AI-powered writing assistant for academics, researchers, and professionals.</p>
+        </div>
+        <div>
+            <h4 class="font-bold text-lg mb-4">Product</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Templates</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold text-lg mb-4">Resources</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Guides</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold text-lg mb-4">Company</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 GetCopy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Simple scroll behavior for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

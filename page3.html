@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCopy - Your Academic Writing Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
+</head>
+<body class="bg-gray-50">
+<!-- Header/Navigation -->
+<header class="fixed w-full bg-white shadow-sm z-50">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold text-blue-600">GetCopy</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600">Testimonials</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a>
+            </div>
+            <div class="flex space-x-4">
+                <button class="px-6 py-2 text-blue-600 hover:text-blue-700">Sign In</button>
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Start Free</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    Transform Your Writing Journey
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Say goodbye to writer's block and hello to academic success. GetCopy is your AI-powered writing companion.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transform hover:scale-105 transition">
+                        Start Free Trial
+                    </button>
+                    <button class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transform hover:scale-105 transition">
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/2463EB/FFFFFF?text=GetCopy" alt="Writing Assistant Demo" class="rounded-lg shadow-xl"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Why Students Choose GetCopy</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-4">📚</div>
+                <h3 class="text-xl font-semibold mb-4">Better Grades, Less Stress</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li>• Improve writing quality with AI suggestions</li>
+                    <li>• Get real-time feedback</li>
+                    <li>• Meet deadlines with confidence</li>
+                </ul>
+            </div>
+            <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-4">⏰</div>
+                <h3 class="text-xl font-semibold mb-4">Save Precious Time</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li>• Cut research time in half</li>
+                    <li>• Generate outlines instantly</li>
+                    <li>• Format citations automatically</li>
+                </ul>
+            </div>
+            <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-4">💡</div>
+                <h3 class="text-xl font-semibold mb-4">Learn As You Write</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li>• Understand complex topics better</li>
+                    <li>• Learn from suggestions</li>
+                    <li>• Develop stronger writing skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Pricing Plans for Students</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Free Plan</h3>
+                <p class="text-4xl font-bold mb-6">$0</p>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ Basic writing suggestions</li>
+                    <li>✓ 3 documents per month</li>
+                    <li>✓ Standard templates</li>
+                </ul>
+                <button class="w-full py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">
+                    Get Started
+                </button>
+            </div>
+            <div class="bg-blue-600 rounded-xl shadow-lg p-8 transform scale-105">
+                <h3 class="text-2xl font-bold mb-4 text-white">Student Pro</h3>
+                <p class="text-4xl font-bold mb-6 text-white">$9.99<span class="text-lg">/month</span></p>
+                <ul class="space-y-3 mb-8 text-white">
+                    <li>✓ Unlimited documents</li>
+                    <li>✓ Advanced AI assistance</li>
+                    <li>✓ All templates</li>
+                    <li>✓ Priority support</li>
+                </ul>
+                <button class="w-full py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100">
+                    Start Free Trial
+                </button>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Student Team</h3>
+                <p class="text-4xl font-bold mb-6">$19.99<span class="text-lg">/month</span></p>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ Everything in Pro</li>
+                    <li>✓ Group collaboration</li>
+                    <li>✓ Share templates</li>
+                    <li>✓ Team workspace</li>
+                </ul>
+                <button class="w-full py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">
+                    Start Free Trial
+                </button>
+            </div>
+        </div>
+        <p class="text-center mt-8 text-gray-600">*Special discount: 20% off with valid student email</p>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">What Students Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 bg-gray-50 rounded-xl">
+                <p class="text-gray-600 mb-4">"GetCopy helped me improve my essay grades from B's to A's. The writing suggestions are like having a personal writing tutor."</p>
+                <p class="font-semibold">Sarah J.</p>
+                <p class="text-gray-500">Psychology Major</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-xl">
+                <p class="text-gray-600 mb-4">"I used to spend hours formatting citations. Now it takes minutes. This tool is a lifesaver!"</p>
+                <p class="font-semibold">Mike T.</p>
+                <p class="text-gray-500">Engineering Student</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-xl">
+                <p class="text-gray-600 mb-4">"The research assistant feature helped me find perfect sources for my thesis. Highly recommend!"</p>
+                <p class="font-semibold">Emma L.</p>
+                <p class="text-gray-500">History Major</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-2">Is GetCopy suitable for all academic subjects?</h3>
+                <p class="text-gray-600">Yes! GetCopy supports writing across all academic disciplines, from humanities to sciences.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-2">Does using GetCopy count as cheating?</h3>
+                <p class="text-gray-600">No. GetCopy is a learning tool that helps improve your writing skills. All work remains your own.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-2">Can I use GetCopy on my mobile device?</h3>
+                <p class="text-gray-600">Yes, GetCopy works on all devices through our web app and mobile apps.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-2">What if I'm not satisfied with GetCopy?</h3>
+                <p class="text-gray-600">We offer a 30-day money-back guarantee for all paid plans.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">Ready to Transform Your Academic Writing?</h2>
+        <p class="text-xl text-blue-100 mb-8">Join thousands of students who are already writing better papers and saving time with GetCopy.</p>
+        <div class="flex justify-center space-x-4">
+            <button class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transform hover:scale-105 transition">
+                Start Your Free Trial
+            </button>
+            <button class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-blue-500 transform hover:scale-105 transition">
+                Watch Demo
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">GetCopy</h3>
+                <p class="text-gray-400">Your AI-powered writing companion for academic success.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Product</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Features</a></li>
+                    <li><a href="#" class="hover:text-white">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white">Templates</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Support</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Connect</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+                    <li><a href="#" class="hover:text-white">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p>© 2023 GetCopy. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
